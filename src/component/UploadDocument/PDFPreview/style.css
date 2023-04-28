@@ -1,0 +1,86 @@
+.body {
+    margin: 0;
+    background-color: #73bf45;
+    font-family: Segoe UI, Tahoma, sans-serif;
+  }
+  
+  .Example input,
+  .Example button {
+    font: inherit;
+  }
+  
+  .Example header {
+    background-color: #323639;
+    box-shadow: 0 0 8px #73bf45;
+    padding: 20px;
+    color: white;
+  }
+  
+  .Example header h1 {
+    font-size: inherit;
+    margin: 0;
+  }
+  
+  .Example__container {
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px; */
+  }
+  
+  .Example__container__load {
+    margin-top: 1em;
+    color: white;
+  }
+  
+  .Example__container__document {
+    /* margin: 1em 0; */
+  }
+  
+  .Example__container__document .react-pdf__Document {
+    cursor: pointer;
+  }
+  
+  .Example__container__document .react-pdf__Page {
+    /* max-width: calc(100% - 2em); */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    /* margin: 1em; */
+  }
+  
+
+  .Example__container__document .react-pdf__Page .react-pdf__Page__textContent 
+  {display: none;}
+
+  .Example__container__document .react-pdf__message {
+    padding: 20px;
+    color: white;
+  }
+  .bottom_section{
+    position: absolute;
+      bottom: 10px;
+      left: 350px;
+      opacity: 0;
+      transition: opacity ease-in-out 0.2s;
+      border-radius: 5px;
+      background: #48484812;
+  }
+  .bottom_section button {
+    border: none;
+    cursor: pointer;
+          padding: 4px 8px;
+  }
+    
+
+  .Example__container__document{
+    position: relative;
+  }
+  .bottom_section span {
+    padding: 0px 5px;
+      font-weight: 400;
+      color: #6e6d6d;
+  }
+    .Example__container__document:hover  .bottom_section {
+      opacity: 1;
+    }
+  

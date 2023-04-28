@@ -1,0 +1,75 @@
+.body {
+  margin: 0;
+  background-color: #73bf45;
+  font-family: Segoe UI, Tahoma, sans-serif;
+}
+
+.Pdf input,
+.Pdf button {
+  font: inherit;
+}
+
+.Pdf header {
+  background-color: #323639;
+  box-shadow: 0 0 8px #73bf45;
+  padding: 20px;
+  color: white;
+}
+
+.Pdf header h1 {
+  font-size: inherit;
+  margin: 0;
+}
+
+
+.Pdf__container__load {
+  margin-top: 1em;
+  color: white;
+}
+
+.Pdf__container__document .react-pdf__Document {
+  cursor: pointer;
+}
+
+.Pdf__container__document .react-pdf__Page {
+  /* max-width: calc(100% - 2em); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  /* margin: 1em; */
+}
+
+.Pdf__container__document .react-pdf__message {
+  padding: 20px;
+  color: white;
+}
+.Pdf__container__document .react-pdf__Page__textContent {
+  top: 46.5% !important;
+}
+.bottom_section_pdf {
+  position: absolute;
+  bottom: 10px;
+  /* left: 200px; */
+  opacity: 0;
+  transition: opacity ease-in-out 0.2s;
+  border-radius: 5px;
+  background: #48484812;
+}
+.bottom_section_pdf button {
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.Pdf__container__document {
+  display: flex;
+  position: relative;
+  justify-content: center;
+    margin-top: 30px;
+}
+.bottom_section_pdf span {
+  padding: 0px 5px;
+  font-weight: 400;
+  color: #6e6d6d;
+}
+.Pdf__container__document:hover .bottom_section_pdf {
+  opacity: 1;
+}

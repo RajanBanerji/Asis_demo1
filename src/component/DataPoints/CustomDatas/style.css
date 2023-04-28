@@ -1,0 +1,64 @@
+.document-type-container {
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    margin: 50px 0px 20px 0px;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.form-check-container {
+    border: 1px solid #73bf45;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.check-box-section {
+    display: flex;
+}
+
+.document-type-container-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.form-check-label {
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #73bf45 !important;
+    border-color: #73bf45 !important;
+}
+.classNamem-check-label{
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.check-box-section-list{
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0px 0px 12px;
+}
+
+.check-box-section-list label {
+    font-size: 18px;
+}
+.form-check-container-list{
+    border: 1px solid #73bf45;
+    margin-right: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.form-check-container-list input {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.form-check-container-list label {
+    font-size: 16px;
+    cursor: pointer;
+}

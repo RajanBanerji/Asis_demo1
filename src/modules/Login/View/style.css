@@ -1,0 +1,92 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.heading-common{
+    line-height: 3;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+}
+
+.login-container-left{
+    padding: 15px;
+    width: -webkit-fill-available;
+    margin-bottom: 40px;
+}
+.login-container-right {
+    padding: 15px
+}
+.login-container-right ul {
+        list-style-type: none;
+            padding: 0;
+            padding-left: 44px;
+            
+}
+.login-container-right ul li {
+        padding: 5px;
+        position: relative;
+}
+.login-container-right ul li small {
+    font-family: roboto;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: inherit;
+    color: #080808ad;
+}
+.login-container-right ul li em {
+    position: absolute;
+    left: -34px;
+}
+.login-container-right ul li em i {
+    font-size: 20px;
+}
+.login-left-border{
+    border-left: 2px solid #d2dadd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-section{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.heading-section h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+.button-section .btn-login {
+    width: 100%;
+    border-radius: 25px;
+    height: 45px;
+    margin-top: 25px;
+    background: #73bf45 ;
+    border: none;
+}
+.button-section .btn-login:hover {
+    background: #73bf45 !important;
+    border: none;
+}
+.signup-link-section a {
+    text-decoration: none;
+}
+.login-container-right h2 {
+    font-weight: 500;
+    font-size: 22px;
+        letter-spacing: 1px;
+}
+.login-container-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.button-section .btn-login:focus-visible {
+    background: #73bf45 !important;
+    border-color: 0 0 0 0.25rem rgb(115, 190, 69 / 25%) !important;
+}
+.button-section .btn-login:focus {
+    background: #73bf45 !important;
+    border-color: 0 0 0 0.25rem rgb(115, 190, 69 / 25%) !important;
+}
+

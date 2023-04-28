@@ -1,0 +1,100 @@
+.document-type-container {
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    margin: 50px 0px 20px 0px;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+.upload-document-container {
+    text-align: center;
+    padding: 2px;
+    /* border: 2px #73bf45 dashed; */
+    background: #73bf452e;
+    margin-bottom: 10px;
+}
+.upload-document-container div{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.uploaded-container ul li {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.preview-image{
+            border-radius: 2px;
+                /* border: 1px solid rgb(234, 234, 234); */
+                width: 100%;
+                box-sizing: border-box;
+                /* border-radius: 10px; */
+                color: #fff;
+                margin-bottom: 8px;
+}
+.preview-image img {
+    width: 200px;
+    height: 200px;
+    /* object-fit: cover; */
+        box-shadow: 0 0 8px rgb(0 0 0 / 50%);
+}
+.preview-image label {
+        margin-bottom: 5px;
+            margin-left: 14px px;
+            padding: 5px;
+}
+/* .preview-section{
+    display: flex;
+} */
+.uploaded-container{
+    display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* justify-content: space-between; */
+}
+.preview-section {
+    display: flex;
+    width: 25%;
+    /* height: 200px; */
+        margin-bottom: 15px;
+}
+
+.modal-footer-container{
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+
+
+check-input:checked {
+    background-color: #73bf45 !important;
+    border-color: #73bf45 !important;
+}
+.check-container input {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.check-container label {
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+ .check-input-accept:checked {
+    background-color: #73bf45 !important;
+    border-color: #73bf45 !important;
+ }
+ .modal-confimr-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 20px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #73bf45;
+    color: #fff;
+ }
+ .modal-confimr-header span {
+    cursor: pointer;
+ }
+
+ 
