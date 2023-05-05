@@ -83,4 +83,8 @@
     .Example__container__document:hover  .bottom_section {
       opacity: 1;
     }
+
+    .textLayer {
+      top: -14px !important;
+    }
   

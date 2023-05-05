@@ -27,84 +27,88 @@ const CheckResults = ({ selectedInfo }) => {
   const nextBtn = document.getElementById('next-btn');
   const backBtn = document.getElementById('back-btn');
 
-  var interval = setInterval(function () {
-    setPercentage(percentage + 10);
-    if (percentage < 91) setUploadOrDownloadCount(percentage);
-  }, 5000);
-  setTimeout(function () {
-    clearInterval(interval);
-  }, 10000);
+  // var interval = setInterval(function () {
+  //   setPercentage(percentage + 10);
+  //   if (percentage < 91) setUploadOrDownloadCount(percentage);
+  // }, 5000);
+  // setTimeout(function () {
+  //   clearInterval(interval);
+  // }, 10000);
+
+  // useEffect(() => {
+  //   if (storageConfigured) {
+  //     uploadFileToBlob(selectedInfo.uploaded_file[0]);
+  //   }
+  //   nextBtn.style.display = "none";
+  //   backBtn.style.display = "none";
+  // }, []);
+  // const delay = ms => new Promise(res => setTimeout(res, ms));
+  // /* const apiCalling = async (fileURL) => {
+  //   axios({
+  //     url: baseURL,
+  //     method: "POST",
+  //     headers: {
+  //       Accept: "*/*",
+  //       "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  //       "Content-Type": "application/json",
+  //     },
+  //     // data: { name: selectedInfo.uploaded_file[0].name },
+  //     data: fileURL,
+  //   })
+  //     .then((res) => {
+  //       const getData = async () => {
+  //         const response = await axios.get(res.data.statusQueryGetUri, {
+  //           headers: {
+  //             Accept: "*/*",            
+  //             "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  //             "Content-Type": "application/json",
+  //           }
+  //         }).catch(e => {
+  //           console.log(e);
+  //         });
+
+  //         if(response.data.runtimeStatus === 'Completed') {
+  //           setUploadOrDownloadCount(100);
+  //           await delay(5000);
+  //           nextBtn.style.display = "block";
+  //           backBtn.style.display = "block";
+  //           const tempArray = [];
+  //           let tempObj = {};
+  //           for (let key in response.data.output) {
+  //             if (response.data.output.hasOwnProperty(key) && !(response.data.output[key] === 'na'|| response.data.output[key] === 'Na'|| response.data.output[key] === 'NA'|| response.data.output[key] === 'no' || response.data.output[key] === 'No' || response.data.output[key] === 'NO')) {
+  //               tempObj = {
+  //                 name: key,
+  //                 value: response.data.output[key],
+  //               };
+  //               tempArray.push(tempObj);
+  //             }
+  //           }
+  //           setInfo(tempArray);
+  //           let arr = [];
+  //           for (const element of tempArray) {
+  //             arr.push([element.value]);
+  //           }
+  //           setMarkWords(arr); 
+  //           clearInterval(checkResponse); 
+  //           setWatingLoader(false);
+  //         }
+  //       };
+  
+  //       const checkResponse = setInterval(() => {
+  //         getData();
+  //       }, 12000);
+       
+  //     })
+
+  //     // Catch errors if any
+  //     .catch((err) => {
+  //       console.log("err", err);
+  //     });
+  // }; */
 
   useEffect(() => {
-    if (storageConfigured) {
-      uploadFileToBlob(selectedInfo.uploaded_file[0]);
-    }
-    nextBtn.style.display = "none";
-    backBtn.style.display = "none";
+    setWatingLoader(false);
   }, []);
-  const delay = ms => new Promise(res => setTimeout(res, ms));
-  const apiCalling = async (fileURL) => {
-    axios({
-      url: baseURL,
-      method: "POST",
-      headers: {
-        Accept: "*/*",
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-        "Content-Type": "application/json",
-      },
-      // data: { name: selectedInfo.uploaded_file[0].name },
-      data: fileURL,
-    })
-      .then((res) => {
-        const getData = async () => {
-          const response = await axios.get(res.data.statusQueryGetUri, {
-            headers: {
-              Accept: "*/*",            
-              "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-              "Content-Type": "application/json",
-            }
-          }).catch(e => {
-            console.log(e);
-          });
-
-          if(response.data.runtimeStatus === 'Completed') {
-            setUploadOrDownloadCount(100);
-            await delay(5000);
-            nextBtn.style.display = "block";
-            backBtn.style.display = "block";
-            const tempArray = [];
-            let tempObj = {};
-            for (let key in response.data.output) {
-              if (response.data.output.hasOwnProperty(key) && !(response.data.output[key] === 'na'|| response.data.output[key] === 'Na'|| response.data.output[key] === 'NA'|| response.data.output[key] === 'no' || response.data.output[key] === 'No' || response.data.output[key] === 'NO')) {
-                tempObj = {
-                  name: key,
-                  value: response.data.output[key],
-                };
-                tempArray.push(tempObj);
-              }
-            }
-            setInfo(tempArray);
-            let arr = [];
-            for (const element of tempArray) {
-              arr.push([element.value]);
-            }
-            setMarkWords(arr); 
-            clearInterval(checkResponse); 
-            setWatingLoader(false);
-          }
-        };
-  
-        const checkResponse = setInterval(() => {
-          getData();
-        }, 12000);
-       
-      })
-
-      // Catch errors if any
-      .catch((err) => {
-        console.log("err", err);
-      });
-  };
 
   const handleEdit = (index, key, value) => {
     for (let i = 0; i < info.length; i++) {
@@ -183,7 +187,7 @@ const onExportDataExcel = () => {
   // azure file uploading
 
   // <snippet_uploadFileToBlob>
-  const uploadFileToBlob = async (file) => {
+ /*  const uploadFileToBlob = async (file) => {
     if (!file) return [];
     // get BlobService = notice `?` is pulled out of sasToken - if created in Azure portal
     const blobService = new BlobServiceClient(
@@ -207,7 +211,8 @@ const onExportDataExcel = () => {
       })
       .catch((ex) => console.log("error", ex.message));
   };
-  // </snippet_uploadFileToBlob>
+  // </snippet_up */
+  //loadFileToBlob>
 
   return (
     <div className="check-result-container">
